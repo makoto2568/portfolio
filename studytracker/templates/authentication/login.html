@@ -1,0 +1,33 @@
+{% load static %}
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/accounts/login.css' %}">
+    <title>studytrackerログイン</title>
+</head>
+
+<body background-color="#708090">
+    <div class="header">
+        <img class="logo" src={% static "images/base/logo.png" %} alt="ロゴ">
+        <div class="row">
+            <button type="button" class="btn btn-outline-light"><a href="{% url 'signup' %}">サインアップ</a></button>
+        </div>
+    </div>
+
+    <div class="login">
+        <div class="login-header">
+              <h1>ログイン</h1>
+        </div>
+      
+        <form action="{% url 'login' %}" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <p><input class="button" type="submit" value="ログイン"></p>
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+{% load static %}
+{% load django_bootstrap5 %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href={% static "css/top/base_style.css" %}>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    <title>APR_BASE</title>
+</head>
+<body>
+    <header>
+        <div class="logo"><a class="logo" href="{% url 'top' %}"><img src={% static "images/base/logo.png" %} alt="ロゴ"></a></div>
+
+        <form method="get" action="#" class="search_container">
+            <input type="text" size="25" placeholder="キーワード検索">
+            <input type="submit" value="&#xf002">
+        </form>
+       
+    </header>
+
+    <div class="contents">
+        <aside>
+            <div class="row1">
+                <button type="button" class="btn btn-outline-light"><a p class="back" href="{% url 'top' %}"><p>Projects</p></a></button>
+                <button type="button" class="btn btn-outline-light"><a class="task" href="{% url 'studytracker:project_detail' project.project_id %}"><p>Task</p></a></button>
+                <button type="button" class="btn btn-outline-light"><a class="note" href="{% url 'studytracker:notes_list' project_id=project.project_id %}"><p>Notes</p></a></button>
+                <button type="button" class="btn btn-outline-light"><a class="Setting" href="{% url 'studytracker:settings' %}"><p>Setting</p></a></button>
+            </div>
+            <div class="row2">
+                <button type="button" class="btn btn-outline-light"><a href="{% url 'logout' %}"><p>ログアウト</p></a></button>
+            </div>
+        </aside>
+
+        <main>
+            <div class="card">
+                <div class="card-body">
+                    <h1>Create Task</h1>
+                    <form method="POST" class="mx-3 mx-md-5">{% csrf_token %}
+                        {% bootstrap_form form %} 
+                        {% bootstrap_button button_type="submit" content="Create" size="lg" %}
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>    
+</body>
+</html>

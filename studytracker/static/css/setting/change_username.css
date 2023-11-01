@@ -1,0 +1,213 @@
+* { 
+    margin: 0;
+  }
+  
+  html{
+    height: 100%;
+  }
+  
+  body{
+    min-height: 100%;
+  }
+  
+  header{
+    width: 100%;
+    height: 15%;
+    background-color:#28d;
+    display: flex;
+  }
+  
+  .logo a {
+    margin-left: 1vh;
+  }
+  
+  header a img{
+    margin-top: 1.5vh;
+    width: 170px;
+    height: 80px;
+  }
+  
+  .search_container{
+    box-sizing: border-box;
+    position: relative;
+    border: 1px solid #fff;
+    display: flex;
+    margin-left: 5vh;
+    margin-top: 33px;
+    padding: 3px 8px;
+    border-radius: 20px;
+    height: 40px;;
+    width: 260px;
+    overflow: hidden;
+    background-color: #fff;
+  }
+  
+  .search_container input[type="text"]{
+    border: none;
+    padding-top: 2px;
+    height: 2.0em;
+  }
+  
+  .search_container input[type="text"]:focus {
+    outline: 0;
+  }
+  
+  .search_container input[type="submit"]{
+    cursor: pointer;
+    font-family: FontAwesome;
+    font-size: 1.3em;
+    border: none;
+    background: none;
+    color: #28d;
+    position: absolute;
+    width: 2.5em;
+    height: 2.5em;
+    right: 0;
+    top: -10px;
+    outline : none;
+  }
+  
+  .function{
+    margin-left: 34%;
+    padding-right: 4vh;
+    display: flex;
+  }
+  
+  .function a img{
+    width:45px;
+    height: 45px;
+    margin-top: 28px; 
+    padding-left: 45px;
+  }
+  
+  .contents{
+    display: flex;
+  
+  }
+  
+  main{
+    width: 100%;
+  }
+  
+  article{
+  width: 25%;
+  }
+  
+  article h1{
+    margin-left: 100px;
+    align-items: center;
+  }
+  
+  aside{
+    position: sticky;
+    width: 13.5%;
+    min-height: 100vh;
+    background-color: #6495ed;
+  }
+  
+  aside a{
+    text-decoration: none;
+  }
+  
+  .row1{
+    position: fixed;
+    margin-top: 15vh;
+    margin-left: 1.3vw;
+  }
+  
+  .row2{
+    position: fixed;
+    display: flex;
+    flex-direction:column;
+    gap: 5vh;
+    margin-top: 68vh;
+    margin-bottom: 30%;
+    margin-left: 1.3vw;
+  }
+  
+  aside button {
+    width: 9vw;
+    height: 5vh;
+    background: #6495ed;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    padding-right: 10%;
+  }
+
+  button {
+    width: 10vw;
+    height: 5vh;
+    background: #6495ed;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    padding-right: 10%;
+  }
+  
+  .row2 p{
+    color: #fff;
+    font-size: 15px;
+    margin-left: 0.5vw;
+  }
+  
+  .row1 .note p{
+    color: #fff;
+    font-size: 17px;
+    margin-left: 0.5vw;
+  }
+  
+  .row1 .back p{
+    color: #fff;
+    font-size: 13px;
+    margin-left: 0.5vw;
+  }
+  
+  main h3 {
+    font-size: 20px;
+    margin-left: 6%;
+    margin-top: 2%;
+  }
+  
+  .change-name{
+    border: 1px solid #000;
+    border-radius: 8px;
+    width: 40%;
+    height: 40%;
+    margin-left: 26vw;
+    margin-top: 25vh;
+  }
+
+  .title{
+    padding-bottom: 8px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 8px;
+    margin-top: 2vh;
+  }
+
+  .title h2{
+    margin-left: 9vw;
+  }
+
+  .change-name input{
+    margin-top: 5vh;
+  }
+
+  .change-name label{
+    font-size: 20px;
+    margin-left: 4vw;
+  }
+
+  .change-name button{
+    margin-top: 8vh;
+    margin-left: 12vw;
+  }
+
+  .change-name button p{
+    font-size: 15px;
+    color: #fff;
+    margin-left: 2.5vw;
+  }
+
+  .change-name li{
+    margin-left: 2.5vw;
+    margin-top: 4vh;
+  }

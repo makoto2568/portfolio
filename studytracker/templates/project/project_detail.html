@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href={% static "css/top/base_style.css" %}>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <title>APR_BASE</title>
+</head>
+<body>
+    <header>
+        <div class="logo"><a class="logo" href="{% url 'top' %}"><img src={% static "images/base/logo.png" %} alt="ロゴ"></a></div>
+
+        <form method="get" action="#" class="search_container">
+            <input type="text" size="25" placeholder="キーワード検索">
+            <input type="submit" value="&#xf002">
+        </form>
+       
+    </header>
+
+    <div class="contents">
+        <aside>
+            <div class="row1">
+                <button type="button" class="btn btn-outline-light"><a p class="back" href="{% url 'top' %}"><p>Projects</p></a></button>
+                <button type="button" class="btn btn-outline-light"><a class="task" href="{% url 'studytracker:project_detail' project.project_id %}"><p>Task</p></a></button>
+                <button type="button" class="btn btn-outline-light"><a class="note" href="{% url 'studytracker:notes_list' project_id=project.project_id %}"><p>Notes</p></a></button>
+                <button type="button" class="btn btn-outline-light"><a class="Setting" href="{% url 'studytracker:settings' %}"><p>Setting</p></a></button>
+            </div>
+            <div class="row2">
+                <button type="button" class="btn btn-outline-light"><a href="{% url 'logout' %}"><p>ログアウト</p></a></button>
+            </div>
+        </aside>   
+
+        <main>
+            <h1>{{ project.project_name }}Detail</h1>
+            
+            <h2>Taks:</h2>
+            <ul>
+                {% for task in tasks %}
+                <a href="{% url 'studytracker:task_detail' project_id=project.project_id task_id=task.task_id %}" class="task-title">
+                  <li>{{ task.task_name }} - {{ task.status }}</li>
+                </a>
+                {% endfor %}
+            </ul>
+
+            <a href="{% url 'studytracker:create_task' project_id=project.project_id %}" class="task-title"><h3>新規作成</h3></a>
+        </main>
+    </div>
+    
+</body>
+</html> 

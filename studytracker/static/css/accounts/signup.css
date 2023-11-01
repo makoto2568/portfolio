@@ -1,0 +1,113 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+
+header{
+    margin:0;
+    max-width: 100%;
+    height: 60%;
+    background-color: #28d;
+    display: flex;
+    
+}
+
+.logo {
+  margin-left: 10px;
+}
+
+header img{
+  margin-top: 10px;
+  width: 170px;
+  height: 80px;
+}
+
+header li{
+  list-style: none;
+}
+
+.row{
+  margin-top: 3vh;
+  margin-left: 75vw;
+  
+}
+
+button {
+  height: 70%;
+  background: #28d;
+  border: solid 1px #fff;
+  border-radius: 10%;;
+}
+
+button a{
+    font-size: 15px;
+    text-decoration: none;
+    color: #fff;
+}
+
+button:hover {
+    opacity: .6;
+}
+
+body {
+  margin: 0;
+  background: #fff;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.signup {
+  width: 400px;
+  height: 100px;
+  margin: 80px auto;
+  font-size: 16px;
+}
+
+/* Reset top and bottom margins from certain elements */
+.signup-header {
+  width: auto;
+  background: #28d;
+  padding: 2%;
+  font-size: 10px;
+  font-weight: normal;
+  text-align: center;
+  margin-left: 8px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+/* Every row inside .login-container is defined with p tags */
+
+.signup-button{
+  border: none;
+  width: 80px;
+  height: 40px;
+  background-color: #28d;
+  color: #fff;
+  margin-left: 135px;
+  margin-top: 20px;
+  font-size: 15px;
+}
+
+form{
+    margin-left: 7%;
+}
+
+input{
+    width: 352px;
+    height: 48px;
+}
+
+
+.signup p .button{ 
+    width: 25%;
+    margin-left: 35%;
+    font-weight: normal;
+    background-color: #28d;
+    color: #fff;
+    border: none;
+}
+
+@media screen and (max-width: 760px){
+
+  .row{
+    margin-left: 55vw;
+  }
+
+}

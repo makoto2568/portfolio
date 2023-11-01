@@ -1,0 +1,99 @@
+ {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href={% static "css/setting/setting.css" %}>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <title>APR_BASE</title>
+</head>
+<body>
+    <header>
+        <div class="logo"><a class="logo" href="{% url 'top' %}"><img src={% static "images/base/logo.png" %} alt="ロゴ"></a></div>
+
+        <form method="get" action="#" class="search_container">
+            <input type="text" size="25" placeholder="キーワード検索">
+            <input type="submit" value="&#xf002">
+        </form>
+       
+    </header>
+
+    <div class="contents">
+        <aside>
+            <div class="row1">
+                <button type="button" class="btn btn-outline-light"><a p class="back" href="{% url 'top' %}"><p>Projects</p></a></button>
+            </div>
+            <div class="row2">
+                <button type="button" class="btn btn-outline-light"><a href="{% url 'logout' %}"><p>ログアウト</p></a></button>
+            </div>
+        </aside>   
+
+        <main>
+            <h2>[設定]</h2>
+
+            {% block content %}
+            <div class="settings-container">
+                <div class="project-list">
+                    <div class="belong-project">
+                        <h3>所属しているプロジェクト</h3>
+                    </div>
+
+                    <ul>
+                        {% for project in projects %}
+                        <li>
+                            {{ project.project_name }}
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+
+                <div class="user">
+                    <div class="imformation">
+                        <h3>ユーザー情報</h3>
+                    </div>
+
+                    <div class="user-name">
+                        <div>
+                            <p>ユーザーネーム: {{ user.username }}</p>
+                        </div>
+                        <div>
+                            <form method="post" action="{% url 'studytracker:change_username' %}">
+                                {% csrf_token %}
+                                <button type="submit" class="btn btn-primary">Change Username</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="user-email">
+                        <div>
+                            <p>メールアドレス: {{ user.email }}</p>
+                        </div>
+                        <div>
+                            <form method="post" action="{% url 'studytracker:change_email' %}">
+                                {% csrf_token %}
+                                <button type="submit" class="btn btn-primary">Change Email</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="user-password">
+                        <div>
+                            <p>パスワード: **********</p>
+                        </div>
+                        <div>
+                            <form method="post" action="{% url 'studytracker:change_password' %}">
+                                {% csrf_token %}
+                                {{ password_form.as_p }}
+                                <button type="submit">Change Password</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endblock %}
+        </main>
+    </div>
+    
+</body>
+</html>

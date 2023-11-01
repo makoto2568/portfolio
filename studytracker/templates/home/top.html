@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/top/base_style.css' %}">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <title>StudyTracker</title>
+</head>
+<body>
+    <header>
+        <div class="logo"><a class="logo" href="{% url 'top' %}"><img src={% static "images/base/logo.png" %} alt="ロゴ"></a></div>
+
+        <form method="get" action="#" class="search_container">
+            <input type="text" size="25" placeholder="キーワード検索">
+            <input type="submit" value="&#xf002">
+        </form>
+       
+    </header>
+
+    <div class="contents">
+        <aside>
+            <div class="row1">
+                <button type="button" class="btn btn-outline-light"><a class="Setting" href="{% url 'studytracker:settings' %}"><p>Setting</p></a></button>
+            </div>
+            <div class="row2">
+                <button type="button" class="btn btn-outline-light"><a href="{% url 'logout' %}"><p>ログアウト</p></a></button>
+            </div>
+        </aside>
+
+        
+
+        <main>
+            <h3>[Project一覧]</h3>
+
+            <div class="new-project">
+                <a href="{% url 'studytracker:project_new' %}">
+                    <h2>+ New_Project</h2>
+                </a>
+            </div>
+
+            <div class="project-titles">
+                {% for project in projects %}
+                <a href="{% url 'studytracker:project_detail' project.project_id %}" class="project-title">
+                    <h2>{{ project.project_name }}</h2>
+                </a>
+                {% endfor %}
+            </div>
+        </main>
+    </div>
+    
+</body>
+</html>

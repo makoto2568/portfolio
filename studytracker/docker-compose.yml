@@ -1,0 +1,29 @@
+version: "3.9"
+
+services:
+  #DB
+  db:
+    container_name: studytracker_db
+    image: nouchka/sqlite3:latest #イメージ指定
+    stdin_open: true
+    tty: true
+    volumes: #マウント設定
+      - ./db:/var/lib/sqlite3
+    ports:
+      - "5432:5432"
+
+  #Djangoアプリ
+  backend:
+    container_name: backend
+    build: . #dockerfileの指定
+    environment:
+      - PYTHONDONTWRITEBYTECODE=1
+      - PYTHONDONTWRITEBYTECODE_PYC=1
+    restart: always
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes: #マウント設定
+      - .:/studytracker/
+    ports:
+      - "8000:8000"
+    depends_on: #依存関係にある別のサービス
+      - db

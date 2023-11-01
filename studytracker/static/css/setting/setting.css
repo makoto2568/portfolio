@@ -1,0 +1,254 @@
+* { 
+    margin: 0;
+  }
+  
+  html{
+    height: 100%;
+  }
+  
+  body{
+    min-height: 100%;
+  }
+  
+  header{
+    width: 100%;
+    height: 15%;
+    background-color:#28d;
+    display: flex;
+  }
+  
+  .logo a {
+    margin-left: 1vh;
+  }
+  
+  header a img{
+    margin-top: 1.5vh;
+    width: 170px;
+    height: 80px;
+  }
+  
+  .search_container{
+    box-sizing: border-box;
+    position: relative;
+    border: 1px solid #fff;
+    display: flex;
+    margin-left: 5vh;
+    margin-top: 33px;
+    padding: 3px 8px;
+    border-radius: 20px;
+    height: 40px;;
+    width: 260px;
+    overflow: hidden;
+    background-color: #fff;
+  }
+  
+  .search_container input[type="text"]{
+    border: none;
+    padding-top: 2px;
+    height: 2.0em;
+  }
+  
+  .search_container input[type="text"]:focus {
+    outline: 0;
+  }
+  
+  .search_container input[type="submit"]{
+    cursor: pointer;
+    font-family: FontAwesome;
+    font-size: 1.3em;
+    border: none;
+    background: none;
+    color: #28d;
+    position: absolute;
+    width: 2.5em;
+    height: 2.5em;
+    right: 0;
+    top: -10px;
+    outline : none;
+  }
+  
+  .function{
+    margin-left: 34%;
+    padding-right: 4vh;
+    display: flex;
+  }
+  
+  .function a img{
+    width:45px;
+    height: 45px;
+    margin-top: 28px; 
+    padding-left: 45px;
+  }
+  
+  .contents{
+    display: flex;
+  
+  }
+  
+  main{
+    width: 100%;
+  }
+  
+  
+  aside{
+    position: sticky;
+    width: 13.5%;
+    min-height: 100vh;
+    background-color: #6495ed;
+  }
+  
+  aside a{
+    text-decoration: none;
+  }
+  
+  .row1{
+    position: fixed;
+    margin-top: 15vh;
+    margin-left: 1.3vw;
+    display: flex;
+    flex-direction:column;
+    gap: 5vh;
+  }
+  
+  .row2{
+    position: fixed;
+    margin-top: 75vh;
+    margin-bottom: 30%;
+    margin-left: 1.3vw;
+  }
+  
+  button {
+    width: 9vw;
+    height: 5vh;
+    background: #6495ed;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    padding-right: 10%;
+  }
+  
+  .row2 p{
+    color: #fff;
+    font-size: 15px;
+    margin-left: 0.5vw;
+  }
+  
+  .row1 .note p{
+    color: #fff;
+    font-size: 17px;
+    margin-left: 0.5vw;
+  }
+  
+  .row1 .back p{
+    color: #fff;
+    font-size: 13px;
+    margin-left: 0.5vw;
+  }
+  
+  main h3 {
+    font-size: 20px;
+    margin-left: 6%;
+    margin-top: 2%;
+  }
+  
+  main h2{
+    font-size: 24px;
+    margin-left: 5vw;
+    margin-top: 3vh;
+  }
+
+  .settings-container{
+    display: flex;
+  }
+
+  .project-list{
+    border: 1px solid #000;
+    border-radius: 8px;
+    width: 40%;
+    margin-left: 5vw;
+    margin-top: 8vh;
+  }
+
+  .user{
+    border: 1px solid #000;
+    border-radius: 8px;
+    width: 40%;
+    margin-left: 6vw;
+    margin-top: 8vh;
+  }
+
+  .belong-project{
+    padding-bottom: 8px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 8px;
+  }
+
+  .belong-project h3{
+    margin-left: 9vw;
+  }
+
+  .settings-container ul li{
+    margin-top: 5%;
+    margin-left: 1vw;
+    font-size: 20px;
+  }
+
+  .settings-container button:hover{
+    opacity: .7;
+  }
+
+  .imformation{
+    padding-bottom: 8px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 8px;
+  }
+
+  .imformation h3{
+    margin-left: 13vw;
+  }
+  
+  .user-name{
+    display: flex;
+    margin-top: 5%;
+    margin-left: 1.5vw;
+  }
+
+  .user-name form{
+    margin-left: 8.5vw;
+  }
+
+  .user-name p{
+    margin-top: 1vh;
+    font-size: 18px;
+  }
+
+  .user-email{
+    display: flex;
+    margin-top: 5%;
+    margin-left: 1.5vw;
+  }
+
+  .user-email form{
+    margin-left: 4.1vw;
+  }
+
+  .user-email p{
+    margin-top: 1vh;
+    font-size: 18px;
+  }
+
+  .user-password{
+    display: flex;
+    margin-top: 5%;
+    margin-left: 1.5vw;
+    margin-bottom: 3vh;
+  }
+
+  .user-password form{
+    margin-left: 7.5vw;
+  }
+
+  .user-password p{
+    margin-top: 1vh;
+    font-size: 18px;
+  }
+  

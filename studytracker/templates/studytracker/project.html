@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <title>Dambo</title>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Dambo</h1>
+        <nav>
+            <ul class="menu"> 
+                <li class="drop">
+                    <a class="init-bottom" href="#product">Product</a>
+                    <ul class="dropdown_lists">
+                        <li class="dropdown_list"><a href="{% url 'calendar' %}">Calendar</a>
+                        <li class="dropdown_list"><a href="{% url 'document' %}">Document</a>
+                        <li class="dropdown_list"><a href="{% url 'project' %}">Project</a>
+                        <li class="dropdown_list"><a href="{% url 'chat' %}">Chat</a>
+                    </ul>
+                </li>
+                <li class="item"><a href="#service">Service</a></li>
+                <li class="item"><a href="#money">Charge</a></li>
+                <li class="item"><a href="#about">About</a></li>
+                <li class="item"><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <main>
+        <div class="project">
+            <h1>Project</h1>
+            <p>進行中のプロジェクトの進行状況を見られるようにする.(作業前、進行中、レビュー、完成)</p>
+        </div>
+    </main>
+        
+    <footer id="footer">
+        <small>&copy; 2023 Dambo</small>
+    </footer>
+
+    <script src="{% static 'js/motion.js' %}"></script>
+</body>
+</html>

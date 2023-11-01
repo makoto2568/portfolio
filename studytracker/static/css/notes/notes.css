@@ -1,0 +1,327 @@
+*{
+    margin: 0px;
+  }
+  
+  html{
+  height: 100%;
+  }
+  
+  body{
+  min-height: 100%;
+  }
+  
+  header{
+    width: 100%;
+    height: 15%;
+    background-color:#28d;
+    display: flex;
+  }
+  
+  .logo a {
+    margin-left: 1vh;
+  }
+  
+  header a img{
+    margin-top: 1.5vh;
+    width: 170px;
+    height: 80px;
+  }
+  
+  .search_container{
+    box-sizing: border-box;
+    position: relative;
+    border: 1px solid #fff;
+    display: flex;
+    margin-left: 5vh;
+    margin-top: 33px;
+    padding: 3px 8px;
+    border-radius: 20px;
+    height: 40px;;
+    width: 260px;
+    overflow: hidden;
+    background-color: #fff;
+  }
+  
+  .search_container input[type="text"]{
+    border: none;
+    padding-top: 2px;
+    height: 2.0em;
+  }
+  
+  .search_container input[type="text"]:focus {
+    outline: 0;
+  }
+  
+  .search_container input[type="submit"]{
+    cursor: pointer;
+    font-family: FontAwesome;
+    font-size: 1.3em;
+    border: none;
+    background: none;
+    color: #28d;
+    position: absolute;
+    width: 2.5em;
+    height: 2.5em;
+    right: 0;
+    top: -10px;
+    outline : none;
+  }
+  
+  .function{
+    margin-left: 34%;
+    padding-right: 4vh;
+    display: flex;
+  }
+  
+  .function a img{
+    width:45px;
+    height: 45px;
+    margin-top: 28px; 
+    padding-left: 45px;
+  }
+  
+  .contents{
+    display: flex;
+  
+  }
+  
+  main{
+    width: 100%;
+  }
+  
+  main h1 {
+    font-size: 20px;
+    margin-top: 3%;
+    margin-left: 3%;
+  }
+
+  .select p{
+    font-size: 20px;
+    text-align: center;
+    margin-top: 50%;
+  }
+
+  article{
+  width: 30%;
+  }
+  
+  article h1{
+    margin-left: 100px;
+    align-items: center;
+  }
+  
+  .line{
+    border-right: 1px solid #000;
+    height: 100%;
+    margin-top: 0;
+  }
+
+  .detail_line{
+    border-right: 1px solid #000;
+    height: 100%;
+    margin-top: 0;
+  }
+
+  aside{
+    width: 18%;
+    min-height: 100vh;
+    background-color: #6495ed;
+    position: sticky;
+  }
+  
+  aside a{
+    text-decoration: none;
+  }
+  
+  .row1{
+    position: fixed;
+    margin-top: 15vh;
+    margin-left: 1.3vw;
+    display: flex;
+    flex-direction:column;
+    gap: 5vh;
+  }
+  
+  .row2{
+    position: fixed;
+    margin-top: 75vh;
+    margin-bottom: 30%;
+    margin-left: 1.3vw;
+  }
+  
+  button {
+    width: 9vw;
+    height: 5vh;
+    background: #6495ed;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    padding-right: 10%;
+  }
+  
+  .row2 p{
+    color: #fff;
+    font-size: 15px;
+    margin-left: 0.5vw;
+  }
+  
+  .row1 .note p{
+    color: #fff;
+    font-size: 17px;
+    margin-left: 0.5vw;
+  }
+  
+  .row1 .back p{
+    color: #fff;
+    font-size: 13px;
+    margin-left: 0.5vw;
+  }
+  
+  .line{
+    display: flex;
+    flex-direction:column;
+    gap: 8vh;
+    list-style: none;
+  }
+
+  .detail_line{
+    display: flex;
+    flex-direction:column;
+    gap: 1vh;
+    list-style: none;
+  }
+
+  .line a{
+    text-decoration: none;
+  }
+
+  .detail_line a{
+    text-decoration: none;
+  }
+
+  .new_note{
+    background: #228b22;
+    border-radius: 10px;
+    width: 10vw;
+    height: 5%;
+    margin-top: 5vh;
+    margin-left: 2vw;
+  }
+
+  .new_note p{
+    color: #fff;
+    font-size: 17px;
+    margin-top: 1.8vh;
+    margin-left: 2.7vw;
+  }
+  
+  .new_note:hover{
+    opacity: 0.7;
+  }
+
+  .notes button{
+    background: #f1f8ff;
+    border: 1px solid #f1f8ff;
+  }
+
+  .notes a {
+    color: #000;
+    font-size: 20px;
+  }
+ 
+  .notes_list {
+    margin-top: 15%;
+  }
+
+  .notes_list button{
+    background: #f1f8ff;
+    border: 1px solid #f1f8ff;
+  }
+
+  .notes_list a {
+    color: #000;
+    font-size: 20px;
+  }
+
+
+  ul{
+    padding: 0;
+    position: relative;
+  }
+
+  ul li{
+    color: #2d8fdd;
+    border-left: solid 6px #2d8fdd;/*左側の線*/
+    background: #f1f8ff;/*背景色*/
+    margin-bottom: 3px;/*下のバーとの余白*/
+    margin-left: 2vw;
+    line-height: 1.5;
+    padding: 0.5em;
+    width: 70%;
+    list-style-type: none!important;/*ポチ消す*/
+  }
+
+  .card {
+    border: 1px solid #000;
+    border-radius: 8px;
+    width: 90%;
+    height: 20%;
+    margin-left: 2vw;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    margin-top: 5vh;
+    margin-bottom: 16px;
+    background-color: #fff;
+}
+
+.card-header {
+    padding-bottom: 8px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 8px;
+}
+
+.card-body {
+    padding-top: 8px;
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10vh;
+}
+
+.options a {
+  background: #2d8fdd;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  width: 10vw;
+  height: 5.1vh;
+  margin-left: 2vw;
+}
+
+.options p{
+  font-size: 17px;
+  text-align: center;
+  margin-top: 0.8vh;
+}
+
+.options button {
+  background-color: #dc3545;
+  font-size: 17px;
+  color: #fff;
+  width: 10vw;
+  height: 5vh;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 12px;
+  cursor: pointer;
+  margin-right: 2.5vw;
+}
+
+
+
+
+
+
